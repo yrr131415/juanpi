@@ -19,9 +19,4 @@
 			$("#txt").value="请输入想找的宝贝";
 		}
 	}
-// let liDom=$("#uls").children;
-// for(let i=0;i<liDom.length;i++){
-// 	  liDom[i].onmouseover=function(){
-// 	  	liDom[i]:nth-child(2).style.display="block";
-// 	  }
-// }
+
