@@ -17,7 +17,7 @@ window.onload=function(){
 			if(r.test($("#inp1").value)){
 			  $("#strong").style.display = "inline-block";
 			  $("#strong").style.backgroundPosition = "-40px -19px";
-			    $("#p1").style.display="none";
+			    $("#p1").innerHTML="";
 			}else{
 				$("#strong").style.display = "inline-block";
 				$("#strong").style.backgroundPosition = "0 -19px";
@@ -114,11 +114,11 @@ window.onload=function(){
      
      $("#getY").onclick=function(){
      	var num="";
-		for(var i=0;i<4;i++){
-			num+=Math.floor(Math.random()*10)
-		}
-        $("#inp4").value=num;
-     }
+			for(var i=0;i<4;i++){
+				num+=Math.floor(Math.random()*10)
+			}
+	        $("#inp4").value=num;
+	   }
    
    if($("#check").checked){
    	  return true;
@@ -126,7 +126,6 @@ window.onload=function(){
    $("#sub").onclick=function(){
    	  if(flagphone && flagcode && flagcode2 && flagma){
 				return true;
-				
 			}else{
 				return false;
 			}
@@ -141,7 +140,8 @@ window.onload=function(){
 			}else{
 				return document.getElementsByTagName(str);
 			}
-	   }	
+	 }
+	
 	  function hasLetter(pass){
 	    	for(var i=0;i<pass.length;i++){
 		    	var code=pass.charCodeAt(i);
@@ -171,5 +171,31 @@ window.onload=function(){
     	}
     	return false;
     }
+    
+  
+//ajax请求发送
+  $("#sub").onclick=function(){
+		//1.创建对象
+		let xhr=new XMLHttpRequest();
+		//2.设置请求参数
+		xhr.open('post','./php/saveUser.php',true);
+
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
+		let sendstr=`userphone=${$("#inp1").value}&userpass=${$("#inp2").value}`;
+		
+			//3.设置回调函数
+		xhr.onreadystatechange=function(){
+			if(xhr.status==200 && xhr.readyState==4){
+				if(xhr.responseText==0){
+				  $('#p1').innerHTML = "该手机号已被注册！";
+				 	console.log($('#p1').innerHTML);
+				 }else{
+					window.location.href='login.html';
+				}
+			}
+		}
+		 xhr.send(sendstr);
+ }
+
 
 }

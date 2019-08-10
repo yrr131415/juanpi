@@ -12,14 +12,14 @@
 		<div class="topShow">
 			<div class="box">
 				<div class="loginShow">
-					<a href="https://user.juanpi.com/login">登录</a>
-					<a href="https://user.juanpi.com/register" id="nav-reg">免费注册</a>
-					<a href="https://user.juanpi.com/order">我的订单</a>
+					<a href="login.html">登录</a>
+					<a href="register.html" id="nav-reg">免费注册</a>
+					<a href="login.html">我的订单</a>
 					<a href="https://seller.juanpi.com/choice/welcome">商家入驻</a>
 			    </div>
 			    <div class="bagShow">
 			    	<span class="iconBag"></span>
-			    	<a href="http://cart.juanpi.com/cart">购物袋</a>
+			    	<a href="shoppingCar.html">购物袋</a>
 			    	<span class="circle">0</span>
 			    </div>
 				<div class="otherShow">
@@ -182,7 +182,7 @@
     			</div>
     		</div>
     		<div id="bannerM">
-    			<a href="http://brand.juanpi.com/0?shop_id=5120792">
+    			<!--<a href="http://brand.juanpi.com/0?shop_id=5120792">
     				<div id="brandBox">
     					<img src="image/a1.jpg"/>
     					<div id="brandTime">
@@ -241,18 +241,18 @@
     						</span>
     					</div>
     				</div>
-    			</a>
+    			</a>-->
     		</div>
     		<div id="bannerD">
     			<span>更多品牌特卖：</span>
-    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/b1.png"/></a>
-    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/b1.png"/></a>
-    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/b1.png"/></a>
-    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/b1.png"/></a>
-    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/b1.png"/></a>
-    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/b1.png"/></a>
-    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/b1.png"/></a>
-    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/b1.png"/></a>
+    		    <a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/store/e1.png"/></a>
+    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/store/e2.png"/></a>
+    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/store/e3.png"/></a>
+    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/store/e4.png"/></a>
+    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/store/e5.png"/></a>
+    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/store/e6.png"/></a>
+    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/store/e7.png"/></a>
+    			<a href="http://brand.juanpi.com/1998593?shop_id=5480720"><img src="image/store/e8.png"/></a>
     			<div id="hou">
     				 <a href="http://brand.juanpi.com/1998593?shop_id=5480720">查看全部<img id="arr" src="image/icon_arrow-new.png"/></a>
     			</div>
@@ -272,7 +272,7 @@
     			</div>
     		</div>
     	    <div id="newM">
-    	    	<div id="newBox">
+    	    	<!--<div id="newBox">
     	    		<img class="imgs" src="image/c1.jpg"/>
     	    		<img class="heart" src="image/heart.png" />
     	    		<div id="num">
@@ -391,8 +391,8 @@
     	    			<a href="">口红不掉色保湿滋润</a>
     	    			<span>上新</span>
     	    		</div>
-    	    	</div>
-                <div id="newBox">
+    	    	</div>-->
+                <!--<div id="newBox">
     	    		<img class="imgs" src="image/c1.jpg"/>
     	    		<img class="heart" src="image/heart.png" />
     	    		<div id="num">
@@ -451,7 +451,7 @@
     	    			<a href="">口红不掉色保湿滋润</a>
     	    			<span>上新</span>
     	    		</div>
-    	    	</div>
+    	    	</div>-->
     	    </div>
     	   	<div class="page">
 				<a href="#">上一页</a>
@@ -543,13 +543,16 @@
 </html>
 <script type="text/javascript" src="js/function.js"></script>
 <script type="text/javascript" src="js/BannerPlayer.js"></script>
+<script type="text/javascript" src="js/ajaxTools.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
 	window.onload=function(){
 			new BannerPlayer({
 				imgs:["image/banner1.jpg","image/banner2.jpg","image/banner3.jpg"]
 			},$("#banner"));
 		}
- 
+  	 var myTimer;
+	
 </script>
     	   	    
 		   			
